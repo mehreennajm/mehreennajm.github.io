@@ -19,7 +19,7 @@ calculator.controller('AppCalculator',function CalculatorFunction(){
 		
 
 		if(this.selectedOperation === '+'){
-			this.resultValue = num1 + num2;
+			this.resultValue = num1 + num1;
 		}
 
 		if(this.selectedOperation === 'sqrt'){

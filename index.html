@@ -26,9 +26,9 @@
 				<div class="form-group list-group">
 <div ng-controller="AppCalculator as c">
 
-		<div class="form-control"><input type="text" ng-model="c.number1" class="form-control"></div>
+		<div class="form-control"><input type="text" ng-model="c.number1" class="form-control" placeholder="Enter the First number"></div>
 		<div class="form-control"><span ng-bind="c.selectedOperation" class="btn btn-light"></span></div>
-		<div class="form-control"><input type="text" ng-model='c.number2' class="form-control"></div>
+		<div class="form-control"><input type="text" ng-model='c.number2' class="form-control" placeholder="Enter the Second number"></div>
 		<div class="form-control">
 		<button ng-click="c.computeResult()" class="btn btn-default">=</button>
 		<span ng-bind="c.resultValue"></span></div>
