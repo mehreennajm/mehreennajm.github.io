@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<style type="text/css">
+		.row{
+			margin: 10%;
+			padding-left: 20%;
+
+		}
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script src="angular.min.js"></script>
+	<script src="cal.js"></script>
+	
+
+	<title>Calculator</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-7 col-sm-6">
+
+				<div class="page-header" style="color:rgb(188,175,170)"><h1>Simple Calculator</h1></div><hr>
+				<div class="form-group list-group">
+<div ng-controller="AppCalculator as c">
+
+		<div class="form-control"><input type="text" ng-model="c.number1" class="form-control"></div>
+		<div class="form-control"><span ng-bind="c.selectedOperation" class="btn btn-light"></span></div>
+		<div class="form-control"><input type="text" ng-model='c.number2' class="form-control"></div>
+		<div class="form-control">
+		<button ng-click="c.computeResult()" class="btn btn-default">=</button>
+		<span ng-bind="c.resultValue"></span></div>
+
+		<div class="form-control">
+		<h3>Please select an operator:</h3>
+		
+
+		<button ng-click="c.Buttonclicked('+')" class="btn btn-primary">+</button>
+		<button ng-click="c.Buttonclicked('-')" class="btn btn-success">-</button>
+		<button ng-click="c.Buttonclicked('*')" class="btn btn-warning">*</button>
+		<button ng-click="c.Buttonclicked('/')" class="btn btn-danger">/</button>
+		<button ng-click="c.Buttonclicked('^')" class="btn btn-info">^</button></div>
+		<div class="form-control">
+		<button ng-click="c.Buttonclicked('sqrt')" class="btn btn-primary">sqrt</button>
+		<button ng-click="c.Buttonclicked('sin')" class="btn btn-success">Sin</button>
+		<button ng-click="c.Buttonclicked('cos')" class="btn btn-warning">Cos</button>
+		<button ng-click="c.Buttonclicked('tan')" class="btn btn-danger">Tan</button>
+		<button ng-click="c.Buttonclicked('log')" class="btn btn-info">Log</button>
+
+	
+		
+		<button ng-click="c.clearInputs('clear')" class="btn btn-dark">Clear</button></div>
+		
+		<div>
+		</div>
+		</div>
+	
+</div>
+</div></div>
+
+</body>
+</html>
